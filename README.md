@@ -5,11 +5,11 @@
   <a href="https://www.npmjs.com/package/reframe.js">
     <img alt="npm version 0.3.6" src="https://badge.fury.io/js/reframe.js.svg" />
   </a>
-  <a href="https://unpkg.com/stickybits@latest/dist/reframe.min.js">
+  <a href="https://unpkg.com/reframe.js@latest/dist/reframe.min.js">
     <img alt="unpkg" src="https://img.shields.io/badge/unpkg-link-blue.svg">
   </a>
-  <a href="https://greenkeeper.io/">
-    <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
+  <a href="https://snyk.io/test/github/yowainwright/reframe.ts">
+    <img alt="snyk" src="https://snyk.io/test/github/yowainwright/reframe.ts/badge.svg" />
   </a>
   <a href="https://travis-ci.org/dollarshaveclub/reframe.js">
     <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master" />
@@ -19,7 +19,7 @@
   </a>
 </p>
 <hr>
-<h1 align="center">🖼 Reframe.js</h1>
+<h1 align="center">🖼 Reframe.ts(js)</h1>
 
 <h4 align="center">Reframe.js is a javascript plugin that makes elements scale at a fixed ratio.</h4>
 
@@ -27,14 +27,16 @@ This is particularly awesome for making embedded stuff, like videos or playlists
 
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
 
-
 ### Installing
 
 NPM
+
 ```sh
 npm i reframe.js --save
 ```
+
 Yarn
+
 ```sh
 yarn add reframe.js
 ```
@@ -47,9 +49,9 @@ yarn add reframe.js
 ### Examples
 
 ```javascript
-reframe('iframe'); // Wrap all iFrames in the page
-reframe(document.getElementById('my-frame')); // Pass a DOM element
-reframe(document.querySelectorAll('.my-targets')) // Pass a live node list
+reframe("iframe"); // Wrap all iFrames in the page
+reframe(document.getElementById("my-frame")); // Pass a DOM element
+reframe(document.querySelectorAll(".my-targets")); // Pass a live node list
 ```
 
 Elements that have been wrapped with reframe will not be wrapped twice.
@@ -69,18 +71,20 @@ This plugin is small - `~1.3kb` unminified and is meant to do 1 thing - _wrap el
 If you'd like to not use the classname 'js-reframe', just use your own.
 
 ```javascript
-reframe('iframe', 'my-classname');
+reframe("iframe", "my-classname");
 ```
+
 ### jQuery
 
 **Reframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.reframe.js` for jQuery or Zepto.
 
 ```javascript
-$('iframe').reframe();
+$("iframe").reframe();
 
 // While using a custom class name
-$('iframe').reframe('my-classname');
+$("iframe").reframe("my-classname");
 ```
+
 <hr>
 
 <h2 id="noframe" align="center">🌐 Noframe.js</h2>
@@ -90,17 +94,19 @@ Noframe.js makes the same ratio as Reframe.js using [css calc](https://developer
 Noframe.js's doesn't wrap the element you'd like to be responsive. It, instead, does a calculation based on its or a parent element's `max-width`. Here's a basic [codepen example](http://codepen.io/yowainwright/pen/19cd3f2fc3e00ce80e36285feae20b77).
 
 **Noframe.js Notes**
--   The reframed element requires a parent element with a `max width` to scale above the selected elements intial size otherwise the reframed element will only scale below its initial size. 👍
+
+- The reframed element requires a parent element with a `max width` to scale above the selected elements intial size otherwise the reframed element will only scale below its initial size. 👍
 
 ### Setup
+
 1.  Add `dist/noframe.js`
 2.  `noframe` the element you'd like to re-frame.
 
 ### Examples
 
 ```javascript
-noframe('iframe');
-noframe('iframe', 'parent');
+noframe("iframe");
+noframe("iframe", "parent");
 ```
 
 ### jQuery
@@ -108,15 +114,16 @@ noframe('iframe', 'parent');
 **Noframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.noframe.js` for jQuery or Zepto.
 
 ```javascript
-$('iframe').noframe();
-$('iframe').noframe('parent');
+$("iframe").noframe();
+$("iframe").noframe("parent");
 ```
+
 ## Reframe.js or Noframe.js?
 
 Reframe.js offers the **simplest solution** to making elements scale at an intrinsic ratio.
 
 Noframe.js **doesn't wrap** the selected element to make it scale at an intrinsic ratio. Noframe.js is the ideal solution when various events, like tracking events, could be affected when an element is _wrapped_. It _does_ require a `width` or `max-width` which can involve a bit more setup awareness.
 
-----
+---
 
 [Created](https://github.com/yowainwright/reframe.js) and maintained by [Jeff Wainwright](https://github.com/yowainwright) with [Dollar Shave Club Engineering](https://github.com/dollarshaveclub).
