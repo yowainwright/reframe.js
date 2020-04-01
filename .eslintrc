@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "prettier",
+    "json",
+    "jest",
+    "filenames",
+    "import",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "camelcase": "off",
+    "curly": 1,
+    "import/no-extraneous-dependencies": 1,
+    "max-depth": [1, 5],
+    "max-lines": [
+      1,
+      {
+        "max": 500,
+        "skipBlankLines": true
+      }
+    ],
+    "no-const-assign": 1,
+    "no-var": 1,
+    "prefer-const": 1,
+    "@typescript-eslint/camelcase": [1],
+    "@typescript-eslint/prefer-optional-chain": 1
+  }
+}

@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.ts",
+    "build": "rollup -c rollup.config.js",
     "build:release": "npm run build && npm test",
     "chore:delete-changelog-branch": "if git show-ref --quiet refs/heads/chore-changelog; then git branch -D chore-changelog; fi",
     "chore:branch": "git checkout -b chore-changelog",
@@ -24,7 +24,7 @@
     "prepush": "npm run build && npm test",
     "start": "npm install",
     "test:es-check": "es-check es5 'dist/'",
-    "test:phantom": "node acceptance.ts",
+    "test:phantom": "node run-tests.ts",
     "test": "npm tun test:phantom && npm run test:es-check"
   },
   "repository": {
@@ -54,14 +54,29 @@
     "@rollup/plugin-typescript": "^4.0.0",
     "@types/node": "^13.9.8",
     "@types/rollup": "^0.54.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "commitizen": "^4.0.3",
     "conventional-changelog-cli": "^2.0.12",
     "es-check": "^5.0.0",
-    "eslint": "^6.1.0",
-    "husky": "^4.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-json": "^2.1.1",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
     "jquery": "^3.1.0",
+    "markdownlint-cli": "^0.22.0",
     "node-qunit-phantomjs": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.2",
     "qunit": "^2.4.1",
+    "rimraf": "^3.0.2",
     "rollup": "^1.27.13",
+    "rollup-plugin-uglify": "^6.0.4",
     "typescript": "^3.8.3"
   }
 }
