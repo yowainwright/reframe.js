@@ -4401,14 +4401,14 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-qunit-phantomjs@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/node-qunit-phantomjs/-/node-qunit-phantomjs-2.1.0.tgz#f85672b20d9fa4f606d4ab3bd12d98575b822301"
-  integrity sha512-Nja95IQQ0ss9/KOvgB1GPfLzHL3R5tHHQOlzuZCpMBstVcI52GiwTh9J2Ho8oSZh0jX8ZkHGaZVjO5sw6lLa7Q==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-qunit-phantomjs/-/node-qunit-phantomjs-2.1.1.tgz#84743ae9953555a3ea150be28dfe8671c4b7e41b"
+  integrity sha512-iZPeSCDdv7NjKJB/FZGlAXXRHxBZ6XeoI+SX8MhSVcIqLw9m5hzMqEU0TD7Efe+zsMIueKkJUmXyve+QVcgc2g==
   dependencies:
-    chalk "^2.4.2"
+    chalk "^3.0.0"
     minimist "^1.2.0"
     phantomjs-prebuilt "^2.1.16"
-    qunit-phantomjs-runner "^2.4.0"
+    qunit-phantomjs-runner "^2.4.1"
 
 node-releases@^1.1.38:
   version "1.1.39"
@@ -5061,10 +5061,10 @@ quick-lru@^1.0.0:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
 
-qunit-phantomjs-runner@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/qunit-phantomjs-runner/-/qunit-phantomjs-runner-2.4.0.tgz#0e2005aaaa8b0395bfafc18d83258bf5f0b803fb"
-  integrity sha512-inRwe7hGvZAqs+zwJ/4ll/ZvSS+c2sE/Wuv1t4FwuMN/o43RbR7dqEEMCedAYw2Jo+VjcQTyYoyp0y4lRQ1P8Q==
+qunit-phantomjs-runner@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/qunit-phantomjs-runner/-/qunit-phantomjs-runner-2.4.1.tgz#af74160f9f1fa3529106bf55941d2cad86235515"
+  integrity sha512-UBpfyREVhwSmGlJqG+KHDbA5mXGQnSjpluhhIap+5ElymTegjgsNPtq0qLAVaOA2KjcxeByDdYZ13LYNGfHCgg==
   dependencies:
     qunit-reporter-junit "^1.1.1"
 
