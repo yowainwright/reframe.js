@@ -1,3 +1,4 @@
+import 'core-js/es/array'
 /**
  * REFRAME.TS 🖼
  * ---
@@ -5,43 +6,44 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-const reframe = (target: string | HTMLElement, cName: string = 'js-reframe') =>
-  Array.from(
-    [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)],
-    (frame: HTMLElement) => {
-      if (frame.className.split(' ').includes(cName) || frame.style.width.includes('%')) return
+export default function reframe(target: string | HTMLElement, cName: string = 'js-reframe') {
+  const frames = [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)]
+  const c = cName || 'js-reframe'
+  for (let i = 0; i < frames.length; i += 1) {
+    const frame = frames[i]
+    const hasClass = frame.className.split(' ').indexOf(c) !== -1
 
-      // get height width attributes
-      const height = frame.getAttribute('height') || frame.offsetHeight
-      const width = frame.getAttribute('width') || frame.offsetWidth
-      const heightNumber = typeof height === 'string' ? parseInt(height) : height
-      const widthNumber = typeof width === 'string' ? parseInt(width) : width
+    if (hasClass || frame.style.width.indexOf('%') > -1) continue
 
-      // general targeted <element> sizes
-      const padding = (heightNumber / widthNumber) * 100
+    // get height width attributes
+    const height = frame.getAttribute('height') || frame.offsetHeight
+    const width = frame.getAttribute('width') || frame.offsetWidth
+    const heightNumber = typeof height === 'string' ? parseInt(height) : height
+    const widthNumber = typeof width === 'string' ? parseInt(width) : width
 
-      // created element <wrapper> of general reframed item
-      // => set necessary styles of created element <wrapper>
-      const div = document.createElement('div')
-      div.className = cName
-      const divStyles = div.style
-      divStyles.position = 'relative'
-      divStyles.width = '100%'
-      divStyles.paddingTop = `${padding}%`
+    // general targeted <element> sizes
+    const padding = (heightNumber / widthNumber) * 100
 
-      // set necessary styles of targeted <element>
-      const frameStyle = frame.style
-      frameStyle.position = 'absolute'
-      frameStyle.width = '100%'
-      frameStyle.height = '100%'
-      frameStyle.left = '0'
-      frameStyle.top = '0'
+    // created element <wrapper> of general reframed item
+    // => set necessary styles of created element <wrapper>
+    const div = document.createElement('div')
+    div.className = cName
+    const divStyles = div.style
+    divStyles.position = 'relative'
+    divStyles.width = '100%'
+    divStyles.paddingTop = `${padding}%`
 
-      // reframe targeted <element>
-      frame.parentNode?.insertBefore(div, frame)
-      frame.parentNode?.removeChild(frame)
-      div.appendChild(frame)
-    },
-  )
+    // set necessary styles of targeted <element>
+    const frameStyle = frame.style
+    frameStyle.position = 'absolute'
+    frameStyle.width = '100%'
+    frameStyle.height = '100%'
+    frameStyle.left = '0'
+    frameStyle.top = '0'
 
-export default reframe
+    // reframe targeted <element>
+    frame.parentNode?.insertBefore(div, frame)
+    frame.parentNode?.removeChild(frame)
+    div.appendChild(frame)
+  }
+}
