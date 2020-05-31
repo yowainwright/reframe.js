@@ -1,4 +1,3 @@
-import 'core-js/es/array'
 /* noframe.js () 🖼
   -------------
   takes 2 arguments:

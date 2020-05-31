@@ -1,4 +1,3 @@
-import 'core-js/es/array'
 /**
  * REFRAME.TS 🖼
  * ---
