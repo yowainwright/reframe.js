@@ -5,7 +5,7 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export const reframe = (target: string | HTMLElement, cName: string = 'js-reframe') =>
+const reframe = (target: string | HTMLElement, cName: string = 'js-reframe') =>
   Array.from(
     [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)],
     (frame: HTMLElement) => {

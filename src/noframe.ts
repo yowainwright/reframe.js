@@ -7,7 +7,7 @@
   defines the height/width ratio of the targeted <element>
   based on the targeted <parent> width
 */
-export const noframe = (target: string | HTMLElement, container: string) =>
+const noframe = (target: string | HTMLElement, container: string) =>
   Array.from(
     [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)],
     (frame: HTMLElement) => {
