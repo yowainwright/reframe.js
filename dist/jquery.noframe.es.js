@@ -81,4 +81,11 @@ function noframe(target, container) {
     }
 }
 
-export default noframe;
+if (typeof window !== 'undefined') {
+    var plugin = window.$ || window.jQuery || window.Zepto;
+    if (plugin) {
+        plugin.fn.noframe = function noframePlugin(cName) {
+            noframe(this, cName);
+        };
+    }
+}

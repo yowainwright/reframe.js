@@ -74,4 +74,11 @@ function reframe(target, cName) {
     }
 }
 
-export default reframe;
+if (typeof window !== 'undefined') {
+    var plugin = window.$ || window.jQuery || window.Zepto;
+    if (plugin) {
+        plugin.fn.reframe = function reframePlugin(cName) {
+            reframe(this, cName);
+        };
+    }
+}

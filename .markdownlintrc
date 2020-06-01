@@ -1,0 +1,12 @@
+{
+  "default": true,
+  "MD007": {
+    "indent": 2
+  },
+  "line-length": false,
+  "first-line-h1": false,
+  "first-header-h1": false,
+  "no-inline-html": false,
+  "no-hard-tabs": false,
+  "whitespace": false
+}
