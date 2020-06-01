@@ -15,19 +15,19 @@ const banner = `/**
 const plugins = [resolve(), commonjs(), typescript({ tsconfig: false })]
 
 const inputs = ['reframe', 'noframe', 'jquery.reframe', 'jquery.noframe']
-const esRollups = inputs.map(name => ({
+const esRollups = inputs.map((name) => ({
   input: `src/${name}.ts`,
   output: { banner, name, file: `dist/${name}.es.js`, format: 'es' },
   plugins,
 }))
 
-const umdRollups = inputs.map(name => ({
+const umdRollups = inputs.map((name) => ({
   input: `src/${name}.ts`,
   output: { banner, name, file: `dist/${name}.js`, format: 'umd' },
   plugins,
 }))
 
-const minRollups = inputs.map(name => ({
+const minRollups = inputs.map((name) => ({
   input: `src/${name}.ts`,
   output: { banner, name, file: `dist/${name}.min.js`, format: 'umd' },
   plugins: [...plugins, uglify()],
