@@ -21,7 +21,7 @@
 <hr>
 <h1 align="center">🖼 Reframe.ts(js)</h1>
 
-<h4 align="center">Reframe.js is a javascript plugin that makes elements scale at a fixed ratio.</h4>
+<h4 align="center">Reframe.ts compiles to a javascript plugin that makes elements scale at a fixed ratio.</h4>
 
 This is particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
 
@@ -49,9 +49,9 @@ yarn add reframe.js
 ### Examples
 
 ```javascript
-reframe("iframe"); // Wrap all iFrames in the page
-reframe(document.getElementById("my-frame")); // Pass a DOM element
-reframe(document.querySelectorAll(".my-targets")); // Pass a live node list
+reframe('iframe') // Wrap all iFrames in the page
+reframe(document.getElementById('my-frame')) // Pass a DOM element
+reframe(document.querySelectorAll('.my-targets')) // Pass a live node list
 ```
 
 Elements that have been wrapped with reframe will not be wrapped twice.
@@ -71,7 +71,7 @@ This plugin is small - `~1.3kb` unminified and is meant to do 1 thing - _wrap el
 If you'd like to not use the classname 'js-reframe', just use your own.
 
 ```javascript
-reframe("iframe", "my-classname");
+reframe('iframe', 'my-classname')
 ```
 
 ### jQuery
@@ -79,10 +79,10 @@ reframe("iframe", "my-classname");
 **Reframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.reframe.js` for jQuery or Zepto.
 
 ```javascript
-$("iframe").reframe();
+$('iframe').reframe()
 
 // While using a custom class name
-$("iframe").reframe("my-classname");
+$('iframe').reframe('my-classname')
 ```
 
 <hr>
@@ -105,8 +105,8 @@ Noframe.js's doesn't wrap the element you'd like to be responsive. It, instead, 
 ### Examples
 
 ```javascript
-noframe("iframe");
-noframe("iframe", "parent");
+noframe('iframe')
+noframe('iframe', 'parent')
 ```
 
 ### jQuery
@@ -114,8 +114,8 @@ noframe("iframe", "parent");
 **Noframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.noframe.js` for jQuery or Zepto.
 
 ```javascript
-$("iframe").noframe();
-$("iframe").noframe("parent");
+$('iframe').noframe()
+$('iframe').noframe('parent')
 ```
 
 ## Reframe.js or Noframe.js?
