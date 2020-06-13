@@ -27,15 +27,29 @@ This is particularly awesome for making embedded stuff, like videos or playlists
 
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
 
+---
+
+**Version 3**
+
+_Version 3_ was released a few days ago. There should be no changes required to use _Version 3_. However, as the compilation process was completely updated, it felt safer to use 3.0.0—to safegard users from any potential issues.
+
+**Updates**
+
+- Switched to [TypeScript](https://www.typescriptlang.org/)
+- Switched [Rollup](https://rollupjs.org/guide/) build process
+- Code mainly does not [mutate](https://css-tricks.com/understanding-immutability-in-javascript/)
+
+---
+
 ### Installing
 
-NPM
+**NPM**
 
 ```sh
 npm i reframe.js --save
 ```
 
-Yarn
+**Yarn**
 
 ```sh
 yarn add reframe.js
