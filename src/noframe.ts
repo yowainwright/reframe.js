@@ -16,28 +16,23 @@ export default function noframe(target: string | HTMLElement, container: string)
     const h = frame.offsetHeight
     const w = frame.offsetWidth
     const styles = frame.style
-    let maxW = `${w}px`
     // => If a targeted <container> element is defined
     if (isContainerElement) {
       // gets/sets the height/width ratio
-      maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width')
+      const maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width')
       styles.width = '100%'
       // calc is needed here b/c the maxW measurement type is unknown
       styles.maxHeight = `calc(${maxW} * ${h} / ${w})`
     } else {
       // gets/sets the height/width ratio
       // => if a targeted <element> closest parent <element> is NOT defined
-      let maxH
       styles.display = 'block'
       styles.marginLeft = 'auto'
       styles.marginRight = 'auto'
-      let fullW: any = maxW
+      const fullW: any = w > parent.offsetWidth ? parent.offsetWidth : `${w}px`
+      const maxH = w > parent.offsetWidth ? (fullW * h) / w : w * (h / w)
       // if targeted <element> width is > than it's parent <element>
       // => set the targeted <element> maxheight/fullwidth to it's parent <element>
-      if (w > parent.offsetWidth) {
-        fullW = parent.offsetWidth
-        maxH = (fullW * h) / w // eslint-disable-line no-mixed-operators
-      } else maxH = w * (h / w)
       styles.maxHeight = `${maxH}px`
       styles.width = fullW
     }

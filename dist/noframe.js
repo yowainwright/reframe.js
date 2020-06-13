@@ -1,6 +1,6 @@
 /**
   reframe.js - Reframe.js: responsive iframes for embedded content
-  @version v3.0.0
+  @version v3.0.1
   @link https://github.com/yowainwright/reframe.ts#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (http://jeffry.in)
   @license MIT
@@ -52,11 +52,10 @@
             var h = frame.offsetHeight;
             var w = frame.offsetWidth;
             var styles = frame.style;
-            var maxW = w + "px";
             // => If a targeted <container> element is defined
             if (isContainerElement) {
                 // gets/sets the height/width ratio
-                maxW = window.getComputedStyle(parent_1, null).getPropertyValue('max-width');
+                var maxW = window.getComputedStyle(parent_1, null).getPropertyValue('max-width');
                 styles.width = '100%';
                 // calc is needed here b/c the maxW measurement type is unknown
                 styles.maxHeight = "calc(" + maxW + " * " + h + " / " + w + ")";
@@ -64,19 +63,13 @@
             else {
                 // gets/sets the height/width ratio
                 // => if a targeted <element> closest parent <element> is NOT defined
-                var maxH = void 0;
                 styles.display = 'block';
                 styles.marginLeft = 'auto';
                 styles.marginRight = 'auto';
-                var fullW = maxW;
+                var fullW = w > parent_1.offsetWidth ? parent_1.offsetWidth : w + "px";
+                var maxH = w > parent_1.offsetWidth ? (fullW * h) / w : w * (h / w);
                 // if targeted <element> width is > than it's parent <element>
                 // => set the targeted <element> maxheight/fullwidth to it's parent <element>
-                if (w > parent_1.offsetWidth) {
-                    fullW = parent_1.offsetWidth;
-                    maxH = (fullW * h) / w; // eslint-disable-line no-mixed-operators
-                }
-                else
-                    maxH = w * (h / w);
                 styles.maxHeight = maxH + "px";
                 styles.width = fullW;
             }
