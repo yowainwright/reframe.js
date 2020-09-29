@@ -42,17 +42,8 @@
      */
     function reframe(target, cName) {
         if (cName === void 0) { cName = 'js-reframe'; }
-        var frames;
+        var frames = typeof target === 'string' ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target ? __spreadArrays(target) : [target];
         var c = cName || 'js-reframe';
-        if (typeof target === 'string') {
-            frames = __spreadArrays(document.querySelectorAll(target));
-        }
-        else if ('length' in target) {
-            frames = __spreadArrays(target);
-        }
-        else {
-            frames = [target];
-        }
         frames.forEach(function (frame) {
             var _a, _b;
             var hasClass = frame.className.split(' ').indexOf(c) !== -1;

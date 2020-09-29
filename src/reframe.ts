@@ -6,16 +6,8 @@
  * @summary defines the height/width ratio of the targeted <element>
  */
 export default function reframe(target: string | HTMLElement | NodeList, cName: string = 'js-reframe') {
-  let frames
+  const frames = typeof target === 'string' ? [...(document.querySelectorAll(target) as any)] : 'length' in target ? [...(target as any)] : [target];
   const c = cName || 'js-reframe'
-
-  if (typeof target === 'string') {
-    frames = [...(document.querySelectorAll(target) as any)]
-  } else if ('length' in target) {
-    frames = [...(target as any)]
-  } else {
-    frames = [target]
-  }
 
   frames.forEach((frame) => {
     const hasClass = frame.className.split(' ').indexOf(c) !== -1
