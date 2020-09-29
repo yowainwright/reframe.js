@@ -5,7 +5,7 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export default function reframe(target: string | HTMLElement | NodeList, cName: string = 'js-reframe') {
+export default function reframe(target: any, cName: string = 'js-reframe') {
   const frames = typeof target === 'string' ? [...(document.querySelectorAll(target) as any)] : 'length' in target ? [...(target as any)] : [target];
   const c = cName || 'js-reframe'
 
