@@ -43,7 +43,9 @@
      */
     function reframe(target, cName) {
         if (cName === void 0) { cName = 'js-reframe'; }
-        var frames = typeof target === 'string' ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target ? __spreadArrays(target) : [target];
+        var frames = typeof target === 'string'
+            ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target
+            ? __spreadArrays(target) : [target];
         var c = cName || 'js-reframe';
         frames.forEach(function (frame) {
             var _a, _b;
