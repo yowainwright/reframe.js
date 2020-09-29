@@ -41,15 +41,17 @@
      * @summary defines the height/width ratio of the targeted <element>
      */
     function reframe(target, cName) {
-        var _a, _b;
         if (cName === void 0) { cName = 'js-reframe'; }
-        var frames = __spreadArrays((typeof target === 'string' ? document.querySelectorAll(target) : target));
+        var frames = typeof target === 'string'
+            ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target
+            ? __spreadArrays(target) : [target];
         var c = cName || 'js-reframe';
-        for (var i = 0; i < frames.length; i += 1) {
-            var frame = frames[i];
+        frames.forEach(function (frame) {
+            var _a, _b;
             var hasClass = frame.className.split(' ').indexOf(c) !== -1;
-            if (hasClass || frame.style.width.indexOf('%') > -1)
-                continue;
+            if (hasClass || frame.style.width.indexOf('%') > -1) {
+                return;
+            }
             // get height width attributes
             var height = frame.getAttribute('height') || frame.offsetHeight;
             var width = frame.getAttribute('width') || frame.offsetWidth;
@@ -76,7 +78,7 @@
             (_a = frame.parentNode) === null || _a === void 0 ? void 0 : _a.insertBefore(div, frame);
             (_b = frame.parentNode) === null || _b === void 0 ? void 0 : _b.removeChild(frame);
             div.appendChild(frame);
-        }
+        });
     }
 
     if (typeof window !== 'undefined') {

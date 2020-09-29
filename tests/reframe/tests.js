@@ -14,6 +14,19 @@ var iframeHeight = idIframe.height()
 QUnit.test('there is #test id', function (assert) {
   assert.equal(document.querySelectorAll('#test').length, 1, 'there is a #test <div>')
 })
+
+// test that reframe.js works when target is a NodeList
+QUnit.test('reframe by querySelectorAll', function (assert) {
+  reframe(document.querySelectorAll('#iframe'))
+  assert.equal($('.js-reframe #iframe').length, 1, 'there is 1 reframed <elements> with #iframe')
+})
+
+// test that reframe.js works when target is an HTMLElement
+QUnit.test('reframe by querySelector', function (assert) {
+  reframe(document.querySelector('#iframe'))
+  assert.equal($('.js-reframe #iframe').length, 1, 'there is 1 reframed <elements> with #iframe')
+})
+
 // test that reframe.js works when selected by an Id
 QUnit.test('reframe by #Id', function (assert) {
   reframe('#iframe')
