@@ -8,7 +8,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (global = global || self, global.reframe = factory());
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.reframe = factory());
 }(this, (function () { 'use strict';
 
     /*! *****************************************************************************
@@ -42,15 +42,24 @@
      * @summary defines the height/width ratio of the targeted <element>
      */
     function reframe(target, cName) {
-        var _a, _b;
         if (cName === void 0) { cName = 'js-reframe'; }
-        var frames = __spreadArrays((typeof target === 'string' ? document.querySelectorAll(target) : target));
+        var frames;
         var c = cName || 'js-reframe';
-        for (var i = 0; i < frames.length; i += 1) {
-            var frame = frames[i];
+        if (typeof target === 'string') {
+            frames = __spreadArrays(document.querySelectorAll(target));
+        }
+        else if ('length' in target) {
+            frames = __spreadArrays(target);
+        }
+        else {
+            frames = [target];
+        }
+        frames.forEach(function (frame) {
+            var _a, _b;
             var hasClass = frame.className.split(' ').indexOf(c) !== -1;
-            if (hasClass || frame.style.width.indexOf('%') > -1)
-                continue;
+            if (hasClass || frame.style.width.indexOf('%') > -1) {
+                return;
+            }
             // get height width attributes
             var height = frame.getAttribute('height') || frame.offsetHeight;
             var width = frame.getAttribute('width') || frame.offsetWidth;
@@ -77,7 +86,7 @@
             (_a = frame.parentNode) === null || _a === void 0 ? void 0 : _a.insertBefore(div, frame);
             (_b = frame.parentNode) === null || _b === void 0 ? void 0 : _b.removeChild(frame);
             div.appendChild(frame);
-        }
+        });
     }
 
     return reframe;

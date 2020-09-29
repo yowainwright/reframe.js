@@ -5,14 +5,24 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export default function reframe(target: string | HTMLElement, cName: string = 'js-reframe') {
-  const frames = [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)]
+export default function reframe(target: string | HTMLElement | NodeList, cName: string = 'js-reframe') {
+  let frames
   const c = cName || 'js-reframe'
-  for (let i = 0; i < frames.length; i += 1) {
-    const frame = frames[i]
+
+  if (typeof target === 'string') {
+    frames = [...(document.querySelectorAll(target) as any)]
+  } else if ('length' in target) {
+    frames = [...(target as any)]
+  } else {
+    frames = [target]
+  }
+
+  frames.forEach((frame) => {
     const hasClass = frame.className.split(' ').indexOf(c) !== -1
 
-    if (hasClass || frame.style.width.indexOf('%') > -1) continue
+    if (hasClass || frame.style.width.indexOf('%') > -1) {
+      return
+    }
 
     // get height width attributes
     const height = frame.getAttribute('height') || frame.offsetHeight
@@ -44,5 +54,5 @@ export default function reframe(target: string | HTMLElement, cName: string = 'j
     frame.parentNode?.insertBefore(div, frame)
     frame.parentNode?.removeChild(frame)
     div.appendChild(frame)
-  }
+  })
 }
