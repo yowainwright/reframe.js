@@ -1,3 +1,26 @@
+## [3.0.2](https://github.com/yowainwright/reframe.ts/compare/3.0.1...3.0.2) (2020-09-30)
+
+
+### bug
+
+* remove core-js ([d2e56e8](https://github.com/yowainwright/reframe.ts/commit/d2e56e88194a2b95e09f4595f518042a9ea59996))
+
+### fix
+
+* adds v3 notes, noframe.js tweaks ([6c13b95](https://github.com/yowainwright/reframe.ts/commit/6c13b95c46349e6daf874a646771517e9d4905d8))
+* init: a lot of ts stuff ([d873526](https://github.com/yowainwright/reframe.ts/commit/d8735260e93d960384505d4077a672ef066cc8b9))
+* linting ([f56c5cf](https://github.com/yowainwright/reframe.ts/commit/f56c5cfd7faaf582b7c26eb9a6eae259da12c04e))
+* readme update ([b3c127a](https://github.com/yowainwright/reframe.ts/commit/b3c127ab3ceae9e9ca2dbe53543fe7f0885cc332))
+* switch to ts and rollup ([68a62c9](https://github.com/yowainwright/reframe.ts/commit/68a62c93ca6ada298026a8efb61e11b582fb16e4))
+* upgrade eslint-plugin-import from 2.20.1 to 2.20.2 ([f1010d5](https://github.com/yowainwright/reframe.ts/commit/f1010d5bd98c47b63a3b6122ec19a2c1f658099b))
+* upgrade eslint-plugin-node from 11.0.0 to 11.1.0 ([51c79fb](https://github.com/yowainwright/reframe.ts/commit/51c79fb59bd2124df7fdec9070fc2202476255bb))
+
+### major
+
+* major version bump for safety ([78a442c](https://github.com/yowainwright/reframe.ts/commit/78a442c89484996bc5980e1f602ad079f463cc91))
+
+
+
 ## [2.2.7](https://github.com/yowainwright/reframe.ts/compare/2.2.6...2.2.7) (2020-01-06)
 
 
