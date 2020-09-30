@@ -8,9 +8,9 @@
   based on the targeted <parent> width
 */
 export default function noframe(target: string | HTMLElement, container: string) {
-  const frames = [...((typeof target === 'string' ? document.querySelectorAll(target) : target) as any)]
-  for (let i = 0; i < frames.length; i += 1) {
-    const frame = frames[i]
+   const frames =
+    typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
+  frames.forEach((frame: HTMLHtmlElement) => {
     const isContainerElement = typeof container !== 'undefined' && document.querySelector(container)
     const parent: HTMLElement = isContainerElement ? document.querySelector(container) : frame.parentElement
     const h = frame.offsetHeight
@@ -29,16 +29,16 @@ export default function noframe(target: string | HTMLElement, container: string)
       styles.display = 'block'
       styles.marginLeft = 'auto'
       styles.marginRight = 'auto'
-      const fullW: any = w > parent.offsetWidth ? parent.offsetWidth : `${w}px`
+      const fullW = w > parent.offsetWidth ? parent.offsetWidth : w
       const maxH = w > parent.offsetWidth ? (fullW * h) / w : w * (h / w)
       // if targeted <element> width is > than it's parent <element>
       // => set the targeted <element> maxheight/fullwidth to it's parent <element>
       styles.maxHeight = `${maxH}px`
-      styles.width = fullW
+      styles.width = `${fullW}px`
     }
     // set a calculated height of the targeted <element>
     const cssHeight = (100 * h) / w // eslint-disable-line no-mixed-operators
     styles.height = `${cssHeight}vw`
     styles.maxWidth = '100%'
-  }
+  })
 }
