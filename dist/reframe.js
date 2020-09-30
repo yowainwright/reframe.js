@@ -1,6 +1,6 @@
 /**
   reframe.js - Reframe.js: responsive iframes for embedded content
-  @version v3.0.1
+  @version v3.0.2
   @link https://github.com/yowainwright/reframe.ts#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (http://jeffry.in)
   @license MIT
@@ -44,10 +44,9 @@
     function reframe(target, cName) {
         if (cName === void 0) { cName = 'js-reframe'; }
         var frames = typeof target === 'string' ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target ? __spreadArrays(target) : [target];
-        var c = cName || 'js-reframe';
         frames.forEach(function (frame) {
             var _a, _b;
-            var hasClass = frame.className.split(' ').indexOf(c) !== -1;
+            var hasClass = frame.className.split(' ').indexOf(cName) !== -1;
             if (hasClass || frame.style.width.indexOf('%') > -1) {
                 return;
             }

@@ -8,10 +8,9 @@
 export default function reframe(target: string | NodeList, cName = 'js-reframe') {
   const frames =
     typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
-  const c = cName || 'js-reframe'
 
   frames.forEach((frame: HTMLHtmlElement) => {
-    const hasClass = frame.className.split(' ').indexOf(c) !== -1
+    const hasClass = frame.className.split(' ').indexOf(cName) !== -1
 
     if (hasClass || frame.style.width.indexOf('%') > -1) {
       return
