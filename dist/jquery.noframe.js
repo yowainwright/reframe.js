@@ -44,7 +44,7 @@
     */
     function noframe(target, container) {
         var frames = typeof target === 'string' ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target ? __spreadArrays(target) : [target];
-        frames.forEach(function (frame) {
+        return frames.forEach(function (frame) {
             var isContainerElement = typeof container !== 'undefined' && document.querySelector(container);
             var parent = isContainerElement ? document.querySelector(container) : frame.parentElement;
             var h = frame.offsetHeight;

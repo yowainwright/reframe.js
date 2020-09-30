@@ -8,9 +8,9 @@
   based on the targeted <parent> width
 */
 export default function noframe(target: string | HTMLElement, container: string) {
-   const frames =
+  const frames =
     typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
-  frames.forEach((frame: HTMLHtmlElement) => {
+  return frames.forEach((frame: HTMLHtmlElement) => {
     const isContainerElement = typeof container !== 'undefined' && document.querySelector(container)
     const parent: HTMLElement = isContainerElement ? document.querySelector(container) : frame.parentElement
     const h = frame.offsetHeight

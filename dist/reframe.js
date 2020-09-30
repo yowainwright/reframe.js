@@ -44,7 +44,7 @@
     function reframe(target, cName) {
         if (cName === void 0) { cName = 'js-reframe'; }
         var frames = typeof target === 'string' ? __spreadArrays(document.querySelectorAll(target)) : 'length' in target ? __spreadArrays(target) : [target];
-        frames.forEach(function (frame) {
+        return frames.forEach(function (frame) {
             var _a, _b;
             var hasClass = frame.className.split(' ').indexOf(cName) !== -1;
             if (hasClass || frame.style.width.indexOf('%') > -1) {
