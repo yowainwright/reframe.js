@@ -12,7 +12,11 @@ const banner = `/**
   @license ${license}
 **/`
 
-const plugins = [resolve(), commonjs(), typescript({ tsconfig: false })]
+const plugins = [
+  resolve(),
+  commonjs(),
+  typescript({ tsconfig: false, lib: ['esnext', 'dom', 'dom.iterable'], target: 'es5' }),
+]
 
 const inputs = ['reframe', 'noframe', 'jquery.reframe', 'jquery.noframe']
 const esRollups = inputs.map((name) => ({

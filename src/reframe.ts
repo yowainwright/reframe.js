@@ -5,17 +5,12 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export default function reframe(target: any, cName: string = 'js-reframe') {
+export default function reframe(target: string | NodeList, cName = 'js-reframe'): void {
   const frames =
-    typeof target === 'string'
-      ? [...(document.querySelectorAll(target) as any)]
-      : 'length' in target
-      ? [...(target as any)]
-      : [target]
-  const c = cName || 'js-reframe'
+    typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
 
-  frames.forEach((frame) => {
-    const hasClass = frame.className.split(' ').indexOf(c) !== -1
+  return frames.forEach((frame: HTMLHtmlElement) => {
+    const hasClass = frame.className.split(' ').indexOf(cName) !== -1
 
     if (hasClass || frame.style.width.indexOf('%') > -1) {
       return
