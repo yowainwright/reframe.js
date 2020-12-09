@@ -1,0 +1,4 @@
+version = 1
+auto_approve_usernames = ["dependabot"]
+merge.automerge_labels = ['dependencies', 'automerge 🚀']
+update.autoupdate_labels = ['dependencies','autoupdate 🔁']
