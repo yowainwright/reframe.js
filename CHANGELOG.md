@@ -1,3 +1,12 @@
+## [3.0.3](https://github.com/yowainwright/reframe.ts/compare/3.0.2...3.0.3) (2021-05-16)
+
+
+### fix
+
+* re-add type declarations 😳 (#302) ([7d4514a](https://github.com/yowainwright/reframe.ts/commit/7d4514a3fe4bdcaf6bb4acfb1a0b1ab3efc258dd)), closes [#302](https://github.com/yowainwright/reframe.ts/issues/302)
+
+
+
 ## [3.0.2](https://github.com/yowainwright/reframe.ts/compare/3.0.1...3.0.2) (2020-09-30)
 
 
