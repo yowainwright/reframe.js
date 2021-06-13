@@ -1,6 +1,6 @@
 /**
   reframe.js - Reframe.js: responsive iframes for embedded content
-  @version v3.0.2
+  @version v3.0.3
   @link https://github.com/yowainwright/reframe.ts#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (http://jeffry.in)
   @license MIT
