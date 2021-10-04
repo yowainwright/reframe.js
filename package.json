@@ -50,7 +50,7 @@
   },
   "homepage": "https://github.com/yowainwright/reframe.ts#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@types/node": "^16.0.0",
