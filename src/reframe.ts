@@ -6,10 +6,9 @@
  * @summary defines the height/width ratio of the targeted <element>
  */
 export default function reframe(target: string | NodeList, cName = 'js-reframe'): void {
-  const frames =
-    typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
-
-  return frames.forEach((frame: HTMLHtmlElement) => {
+  const frames = typeof target === 'string' ? document.querySelectorAll(target) : 'length' in target ? target : [target]
+  for (let i = 0; frames.length > i; i++) {
+    const frame = frames[i] as HTMLElement
     const hasClass = frame.className.split(' ').indexOf(cName) !== -1
 
     if (hasClass || frame.style.width.indexOf('%') > -1) {
@@ -29,6 +28,7 @@ export default function reframe(target: string | NodeList, cName = 'js-reframe')
     // => set necessary styles of created element <wrapper>
     const div = document.createElement('div')
     div.className = cName
+    div.setAttribute('data-testid', 'test-' + cName)
     const divStyles = div.style
     divStyles.position = 'relative'
     divStyles.width = '100%'
@@ -46,5 +46,5 @@ export default function reframe(target: string | NodeList, cName = 'js-reframe')
     frame.parentNode?.insertBefore(div, frame)
     frame.parentNode?.removeChild(frame)
     div.appendChild(frame)
-  })
+  }
 }
