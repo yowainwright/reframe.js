@@ -55,6 +55,12 @@ npm i reframe.js --save
 yarn add reframe.js
 ```
 
+**PNPM**
+
+```sh
+pnpm i reframe.js
+```
+
 ### Setup
 
 1.  Add `dist/reframe.js`

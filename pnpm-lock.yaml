@@ -33,6 +33,7 @@ specifiers:
   markdownlint-cli: ^0.28.1
   node-qunit-phantomjs: ^2.0.0
   npm-run-all: ^4.1.5
+  pnpm: ^6.17.2
   prettier: ^2.4.1
   qunit: ^2.4.1
   rewire: ^5.0.0
@@ -76,6 +77,7 @@ devDependencies:
   markdownlint-cli: 0.28.1
   node-qunit-phantomjs: 2.1.1
   npm-run-all: 4.1.5
+  pnpm: 6.17.2
   prettier: 2.4.1
   qunit: 2.17.2
   rewire: 5.0.0
@@ -5326,6 +5328,12 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       find-up: 2.1.0
+    dev: true
+
+  /pnpm/6.17.2:
+    resolution: {integrity: sha512-hEoGmkr9Gwc2QG9zeRSaRraXCcnDY+7/xr+7B2tg9EXfKBnQZblx8KCa/PZ5iVp9o9aNFC7Qg8pGcaAlsgQGrQ==}
+    engines: {node: '>=12.17'}
+    hasBin: true
     dev: true
 
   /prelude-ls/1.1.2:
