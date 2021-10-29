@@ -41,7 +41,7 @@ _Version 3_ was released a few days ago. There should be no changes required to 
 
 ---
 
-### Installing
+### Installation
 
 **NPM**
 
@@ -53,6 +53,12 @@ npm i reframe.js --save
 
 ```sh
 yarn add reframe.js
+```
+
+**CDN**
+
+```html
+<script src="https://unpkg.com/reframe.js@3.0.3/dist/reframe.min.js"></script>
 ```
 
 ### Setup
