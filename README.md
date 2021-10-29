@@ -58,7 +58,7 @@ yarn add reframe.js
 **CDN**
 
 ```html
-<script src="https://unpkg.com/reframe.js@3.0.3/dist/reframe.min.js"></script>
+<script src="https://unpkg.com/reframe.js@latest/dist/reframe.min.js"></script>
 ```
 
 ### Setup
