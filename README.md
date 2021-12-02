@@ -65,7 +65,6 @@ pnpm i reframe.js
 
 ```html
 <script src="https://unpkg.com/reframe.js@latest/dist/reframe.min.js"></script>
->>>>>>> master
 ```
 
 ### Setup
