@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "module": "dist/reframe.es.js",
@@ -26,7 +26,8 @@
     "start": "pnpm run",
     "test:es-check": "es-check es5 dist/noframe.js dist/reframe.js dist/noframe.min.js dist/reframe.min.js dist/jquery.noframe.js dist/jquery.reframe.js dist/jquery.reframe.min.js dist/jquery.noframe.min.js",
     "test:phantom": "node run-tests.js",
-    "test": "pnpm run test:phantom && pnpm run test:es-check"
+    "test:jest": "jest",
+    "test": "pnpm run test:phantom && pnpm run test:jest && pnpm run test:es-check"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,7 @@ import { getByTestId } from '@testing-library/dom'
 import '@testing-library/jest-dom'
 import reframe from '../reframe'
 
-function setupReframeDom() {
+function setupReframeDom(): HTMLDivElement {
   const parent = document.createElement('div')
   return document.body.appendChild(parent)
 }

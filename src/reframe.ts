@@ -1,3 +1,21 @@
+export function calculateHeight(el: HTMLElement): number {
+  const height = el.getAttribute('height') || el.offsetHeight
+  return typeof height === 'string' ? parseInt(height) : height
+}
+
+export function calculatePadding(el: HTMLElement): string {
+  const width = el.getAttribute('width') || el.offsetWidth
+  const height = el.getAttribute('height') || el.offsetHeight
+  const numericHeight = typeof height === 'string' ? parseInt(height) : height
+  const numbericWidth = typeof width === 'string' ? parseInt(width) : width
+  return (numericHeight / numbericWidth) * 100 + '%'
+}
+
+export function generateElStyles(el: HTMLElement, styles: Record<string, string | number>): HTMLElement {
+  const style = Object.assign(el?.style || {}, styles)
+  return Object.assign(el, { style })
+}
+
 /**
  * REFRAME.TS 🖼
  * ---
@@ -5,7 +23,8 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export default function reframe(target: string | NodeList, cName = 'js-reframe'): void {
+
+export function reframe(target: string | NodeList, cName = 'js-reframe'): void {
   const frames = typeof target === 'string' ? document.querySelectorAll(target) : 'length' in target ? target : [target]
   for (let i = 0; frames.length > i; i++) {
     const frame = frames[i] as HTMLElement
@@ -15,36 +34,24 @@ export default function reframe(target: string | NodeList, cName = 'js-reframe')
       return
     }
 
-    // get height width attributes
-    const height = frame.getAttribute('height') || frame.offsetHeight
-    const width = frame.getAttribute('width') || frame.offsetWidth
-    const heightNumber = typeof height === 'string' ? parseInt(height) : height
-    const widthNumber = typeof width === 'string' ? parseInt(width) : width
-
-    // general targeted <element> sizes
-    const padding = (heightNumber / widthNumber) * 100
-
-    // created element <wrapper> of general reframed item
-    // => set necessary styles of created element <wrapper>
+    const paddingTop = calculatePadding(frame)
     const div = document.createElement('div')
     div.className = cName
     div.setAttribute('data-testid', 'test-' + cName)
-    const divStyles = div.style
-    divStyles.position = 'relative'
-    divStyles.width = '100%'
-    divStyles.paddingTop = `${padding}%`
+    const divWithStyles = generateElStyles(div, { position: 'relative', width: '100%', paddingTop })
+    const frameWithStyles = generateElStyles(frame, {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+    })
 
-    // set necessary styles of targeted <element>
-    const frameStyle = frame.style
-    frameStyle.position = 'absolute'
-    frameStyle.width = '100%'
-    frameStyle.height = '100%'
-    frameStyle.left = '0'
-    frameStyle.top = '0'
-
-    // reframe targeted <element>
-    frame.parentNode?.insertBefore(div, frame)
-    frame.parentNode?.removeChild(frame)
-    div.appendChild(frame)
+    const frameParent = frameWithStyles.parentNode
+    frameParent?.insertBefore(divWithStyles, frameWithStyles)
+    frameParent?.removeChild(frameWithStyles)
+    divWithStyles.appendChild(frameWithStyles)
   }
 }
+
+export default reframe

@@ -7,10 +7,11 @@
   defines the height/width ratio of the targeted <element>
   based on the targeted <parent> width
 */
-export default function noframe(target: string | HTMLElement, container: string): void {
-  const frames =
-    typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
-  return frames.forEach((frame: HTMLHtmlElement) => {
+export function noframe(target: string | HTMLElement, container: string): void {
+  const frames = typeof target === 'string' ? document.querySelectorAll(target) : 'length' in target ? target : [target]
+  for (let i = 0; frames.length > i; i++) {
+    const frame = frames[i] as HTMLElement
+    frame.setAttribute('data-testid', 'test-js-noframe')
     const isContainerElement = typeof container !== 'undefined' && document.querySelector(container)
     const parent: HTMLElement = isContainerElement ? document.querySelector(container) : frame.parentElement
     const h = frame.offsetHeight
@@ -40,5 +41,7 @@ export default function noframe(target: string | HTMLElement, container: string)
     const cssHeight = (100 * h) / w // eslint-disable-line no-mixed-operators
     styles.height = `${cssHeight}vw`
     styles.maxWidth = '100%'
-  })
+  }
 }
+
+export default noframe
