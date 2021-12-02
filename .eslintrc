@@ -7,7 +7,6 @@
     "sourceType": "module"
   },
   "rules": {
-    "camelcase": "off",
     "curly": 1,
     "import/no-extraneous-dependencies": 1,
     "max-depth": [1, 5],
@@ -18,11 +17,6 @@
         "skipBlankLines": true
       }
     ],
-    "no-const-assign": 1,
-    "no-var": 1,
-    "prefer-const": 1,
-    "@typescript-eslint/camelcase": [1],
-    "@typescript-eslint/prefer-optional-chain": 1,
     "@typescript-eslint/no-var-requires": 0
   }
 }
