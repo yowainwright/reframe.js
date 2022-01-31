@@ -1293,9 +1293,9 @@ es-abstract@^1.19.0, es-abstract@^1.19.1:
     unbox-primitive "^1.0.1"
 
 es-check@^6.0.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/es-check/-/es-check-6.2.0.tgz#2dce5bdbe23047679c5b67f7bfd1ad2d39fc9222"
-  integrity sha512-URIO6LqyRXtlZX0IboSk68JlyUxHyiy4WQpEu/eHgEHJD+rd8QNZh5cLyz52FPtDlIQ3KIvVFx14p0oLjR4mzw==
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/es-check/-/es-check-6.2.1.tgz#08d6f5de2045da5d8f1535c66eac39bb611b2b65"
+  integrity sha512-IPiRXUlwSTd2yMklIf9yEGe6GK5wCS8Sz1aTNHm1QSiYzI4aiq19giYbLi95tb+e0JJVKmcU0iQXQWW60a8V9A==
   dependencies:
     "@caporal/core" "^2.0.2"
     acorn "^8.7.0"
