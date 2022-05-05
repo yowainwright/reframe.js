@@ -6,7 +6,8 @@
   "module": "dist/reframe.es.js",
   "unpkg": "dist/reframe.min.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "build": "rollup -c rollup.config.js && yarn build:types",
