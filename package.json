@@ -6,12 +6,14 @@
   "module": "dist/reframe.es.js",
   "unpkg": "dist/reframe.min.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "build": "rollup -c rollup.config.js && yarn build:types",
     "build:release": "yarn build && yarn test",
     "build:types": "tsc",
+    "deploy": "yarn prepush && release-it",
     "lint": "eslint . --fix",
     "lint:ci": "eslint .",
     "prepush": "yarn build && yarn test",
@@ -59,6 +61,7 @@
     "node-qunit-phantomjs": "^2.1.1",
     "prettier": "^2.0.2",
     "qunit": "^2.4.1",
+    "release-it": "^15.0.0",
     "rollup": "^2.12.0",
     "rollup-plugin-uglify": "^6.0.4",
     "typescript": "^4.0.2"
