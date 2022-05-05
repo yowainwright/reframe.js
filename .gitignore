@@ -4,3 +4,4 @@ package-lock.json
 */.DS_Store
 yarn-error.log
 .dccache
+dist/*
