@@ -29,9 +29,9 @@ Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected el
 
 ---
 
-**Version 3**
+**Version 4**
 
-_Version 3_ was released a few days ago. There should be no changes required to use _Version 3_. However, as the compilation process was completely updated, it felt safer to use 3.0.0—to safegard users from any potential issues.
+_Version 4_ was/will be released. There should be no changes required to use _Version 4_. `dist` is ignored on Github so a major version bump (for safety) felt necessary!
 
 **Updates**
 

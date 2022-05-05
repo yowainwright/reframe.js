@@ -5,12 +5,13 @@
  * @param cName
  * @summary defines the height/width ratio of the targeted <element>
  */
-export default function reframe(target: string | NodeList, cName = 'js-reframe'): void {
-  const frames =
-    typeof target === 'string' ? [...document.querySelectorAll(target)] : 'length' in target ? [...target] : [target]
-
-  return frames.forEach((frame: HTMLHtmlElement) => {
-    const hasClass = frame.className.split(' ').indexOf(cName) !== -1
+export default function reframe(target: any, cName): void {
+  let frames = typeof target === 'string' ? document.querySelectorAll(target) : target
+  const c = cName || 'js-reframe'
+  if (!('length' in frames)) frames = [frames]
+  for (let i = 0; i < frames.length; i += 1) {
+    const frame = frames[i]
+    const hasClass = frame.className.split(' ').indexOf(c) !== -1
 
     if (hasClass || frame.style.width.indexOf('%') > -1) {
       return
@@ -28,7 +29,7 @@ export default function reframe(target: string | NodeList, cName = 'js-reframe')
     // created element <wrapper> of general reframed item
     // => set necessary styles of created element <wrapper>
     const div = document.createElement('div')
-    div.className = cName
+    div.className = c
     const divStyles = div.style
     divStyles.position = 'relative'
     divStyles.width = '100%'
@@ -46,5 +47,5 @@ export default function reframe(target: string | NodeList, cName = 'js-reframe')
     frame.parentNode?.insertBefore(div, frame)
     frame.parentNode?.removeChild(frame)
     div.appendChild(frame)
-  })
+  }
 }
