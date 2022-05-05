@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "module": "dist/reframe.es.js",
@@ -83,6 +83,7 @@
     "typescript": "^4.0.2"
   },
   "resolutions": {
+    "ansi-regex": "^4.1.1",
     "minimist": "^1.2.6"
   }
 }
