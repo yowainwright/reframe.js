@@ -33,12 +33,6 @@ Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected el
 
 _Version 4_ was/will be released. There should be no changes required to use _Version 4_. `dist` is ignored on Github so a major version bump (for safety) felt necessary!
 
-**Updates**
-
-- Switched to [TypeScript](https://www.typescriptlang.org/)
-- Switched [Rollup](https://rollupjs.org/guide/) build process
-- Code mainly does not [mutate](https://css-tricks.com/understanding-immutability-in-javascript/)
-
 ---
 
 ### Installation
