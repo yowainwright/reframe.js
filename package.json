@@ -10,17 +10,17 @@
     "types"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && yarn build:types",
-    "build:release": "yarn build && yarn test",
+    "build": "rollup -c rollup.config.js && pnpm run build:types",
+    "build:release": "pnpm run build && pnpm run test",
     "build:types": "tsc",
     "lint": "eslint . --fix",
     "lint:ci": "eslint .",
-    "prepublishOnly": "yarn build && yarn test",
+    "prepublishOnly": "pnpm run build && pnpm run test",
     "release": "release-it",
-    "start": "yarn",
+    "start": "pnpm run",
     "test:es-check": "es-check es5 dist/noframe.js dist/reframe.js dist/noframe.min.js dist/reframe.min.js dist/jquery.noframe.js dist/jquery.reframe.js dist/jquery.reframe.min.js dist/jquery.noframe.min.js",
     "test:phantom": "node run-tests.js",
-    "test": "yarn test:phantom && yarn test:es-check"
+    "test": "pnpm run test:phantom && pnpm run test:es-check"
   },
   "repository": {
     "type": "git",
