@@ -52,7 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "commitizen": "^4.0.3",
-    "conventional-changelog-cli": "^2.0.12",
+    "conventional-changelog-cli": "^3.0.0",
     "es-check": "^7.0.0",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
