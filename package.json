@@ -10,7 +10,7 @@
     "types"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && pnpm run build:types",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs && pnpm run build:types",
     "build:release": "pnpm run build && pnpm run test",
     "build:types": "tsc",
     "lint": "eslint . --fix",
