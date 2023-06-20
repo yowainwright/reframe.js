@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yowainwright/reframe.ts.git"
+    "url": "git+https://github.com/yowainwright/reframe.js.git"
   },
   "keywords": [
     "js",
@@ -44,27 +44,27 @@
   },
   "homepage": "https://github.com/yowainwright/reframe.ts#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "@types/node": "^20.0.0",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^20.3.1",
     "@types/rollup": "^0.54.0",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "commitizen": "^4.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "commitizen": "^4.3.0",
     "conventional-changelog-cli": "^3.0.0",
-    "es-check": "^7.0.0",
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "husky": "^8.0.1",
-    "jquery": "^3.1.0",
+    "es-check": "^7.1.1",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "jquery": "^3.7.0",
     "node-qunit-phantomjs": "^2.1.1",
-    "prettier": "^2.0.2",
-    "qunit": "^2.4.1",
-    "release-it": "^15.0.0",
-    "rollup": "^3.1.0",
+    "prettier": "^2.8.8",
+    "qunit": "^2.19.4",
+    "release-it": "^15.11.0",
+    "rollup": "^3.25.1",
     "rollup-plugin-uglify": "^6.0.4",
-    "typescript": "^5.0.2"
+    "typescript": "^5.1.3"
   },
   "resolutions": {
     "ansi-regex": "^4.1.1",
