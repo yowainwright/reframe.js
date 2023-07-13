@@ -61,7 +61,7 @@
     "node-qunit-phantomjs": "^2.1.1",
     "prettier": "^2.8.8",
     "qunit": "^2.19.4",
-    "release-it": "^15.11.0",
+    "release-it": "^16.1.0",
     "rollup": "^3.25.1",
     "rollup-plugin-uglify": "^6.0.4",
     "typescript": "^5.1.3"
