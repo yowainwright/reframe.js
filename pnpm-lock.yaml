@@ -51,7 +51,7 @@ devDependencies:
     version: 8.0.3
   jquery:
     specifier: ^3.7.0
-    version: 3.7.0
+    version: 3.7.1
   node-qunit-phantomjs:
     specifier: ^2.1.1
     version: 2.1.1(qunitjs@2.4.1)
@@ -3778,8 +3778,8 @@ packages:
       supports-color: 6.1.0
     dev: true
 
-  /jquery@3.7.0:
-    resolution: {integrity: sha512-umpJ0/k8X0MvD1ds0P9SfowREz2LenHsQaxSohMZ5OMNEU2r0tf8pdeEFTHMFxWVxKNyU9rTtK3CWzUCTKJUeQ==}
+  /jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
     dev: true
 
   /js-reporters@1.2.0:
