@@ -60,7 +60,7 @@ devDependencies:
     version: 3.2.5
   qunit:
     specifier: ^2.19.4
-    version: 2.20.0
+    version: 2.20.1
   release-it:
     specifier: ^17.0.0
     version: 17.0.5(typescript@5.3.3)
@@ -4821,8 +4821,8 @@ packages:
       qunitjs: 2.4.1
     dev: true
 
-  /qunit@2.20.0:
-    resolution: {integrity: sha512-N8Fp1J55waE+QG1KwX2LOyqulZUToRrrPBqDOfYfuAMkEglFL15uwvmH1P4Tq/omQ/mGbBI8PEB3PhIfvUb+jg==}
+  /qunit@2.20.1:
+    resolution: {integrity: sha512-scZfyhX8mmP3u/CN2y3CutQb+ppalbpqmm7g/X62M2yOt8ofzsxrRaC+MPmYm/tXxpzs9HGrVeCxZwLoP0tuAA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
