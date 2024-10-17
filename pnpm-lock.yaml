@@ -24,7 +24,7 @@ importers:
         version: 12.1.1(rollup@4.22.4)(tslib@2.5.3)(typescript@5.6.2)
       '@types/node':
         specifier: ^22.0.0
-        version: 22.6.1
+        version: 22.7.6
       '@types/rollup':
         specifier: ^0.54.0
         version: 0.54.0
@@ -443,8 +443,8 @@ packages:
   '@types/json-schema@7.0.12':
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
 
-  '@types/node@22.6.1':
-    resolution: {integrity: sha512-V48tCfcKb/e6cVUigLAaJDAILdMP0fUW6BidkPK4GpGjXcfbnoHasCZDwz3N3yVt5we2RHm4XTQCpv0KJz9zqw==}
+  '@types/node@22.7.6':
+    resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3230,15 +3230,15 @@ snapshots:
       '@commitlint/execute-rule': 17.4.0
       '@commitlint/resolve-extends': 17.4.4
       '@commitlint/types': 17.4.4
-      '@types/node': 22.6.1
+      '@types/node': 22.7.6
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.6.2)
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@22.6.1)(cosmiconfig@8.3.6(typescript@5.6.2))(ts-node@10.9.1(@types/node@22.6.1)(typescript@5.6.2))(typescript@5.6.2)
+      cosmiconfig-typescript-loader: 4.3.0(@types/node@22.7.6)(cosmiconfig@8.3.6(typescript@5.6.2))(ts-node@10.9.1(@types/node@22.7.6)(typescript@5.6.2))(typescript@5.6.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@22.6.1)(typescript@5.6.2)
+      ts-node: 10.9.1(@types/node@22.7.6)(typescript@5.6.2)
       typescript: 5.6.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -3541,7 +3541,7 @@ snapshots:
 
   '@types/json-schema@7.0.12': {}
 
-  '@types/node@22.6.1':
+  '@types/node@22.7.6':
     dependencies:
       undici-types: 6.19.6
 
@@ -4154,11 +4154,11 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@4.3.0(@types/node@22.6.1)(cosmiconfig@8.3.6(typescript@5.6.2))(ts-node@10.9.1(@types/node@22.6.1)(typescript@5.6.2))(typescript@5.6.2):
+  cosmiconfig-typescript-loader@4.3.0(@types/node@22.7.6)(cosmiconfig@8.3.6(typescript@5.6.2))(ts-node@10.9.1(@types/node@22.7.6)(typescript@5.6.2))(typescript@5.6.2):
     dependencies:
-      '@types/node': 22.6.1
+      '@types/node': 22.7.6
       cosmiconfig: 8.3.6(typescript@5.6.2)
-      ts-node: 10.9.1(@types/node@22.6.1)(typescript@5.6.2)
+      ts-node: 10.9.1(@types/node@22.7.6)(typescript@5.6.2)
       typescript: 5.6.2
     optional: true
 
@@ -6282,14 +6282,14 @@ snapshots:
     dependencies:
       typescript: 5.6.2
 
-  ts-node@10.9.1(@types/node@22.6.1)(typescript@5.6.2):
+  ts-node@10.9.1(@types/node@22.7.6)(typescript@5.6.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.6.1
+      '@types/node': 22.7.6
       acorn: 8.11.3
       acorn-walk: 8.2.0
       arg: 4.1.3
