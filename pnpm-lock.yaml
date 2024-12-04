@@ -63,7 +63,7 @@ importers:
         version: 3.4.1
       qunit:
         specifier: ^2.19.4
-        version: 2.22.0
+        version: 2.23.0
       release-it:
         specifier: ^17.0.0
         version: 17.10.0(typescript@5.7.2)
@@ -2431,8 +2431,8 @@ packages:
     peerDependencies:
       qunitjs: '*'
 
-  qunit@2.22.0:
-    resolution: {integrity: sha512-wPYvAvpjTL3zlUeyCX75T8gfZfdVXZa8y1EVkGe/XZNORIsCH/WI2X8R2KlemT921X9EKSZUL6CLGSPC7Ks08g==}
+  qunit@2.23.0:
+    resolution: {integrity: sha512-r4hCsZqUvSyuUUHbCt2kYW1AECD7KTdhKW9mSUuCu51UO44o6oz6L+F3coeryj79MWF7o+S+szJ9Icrr9yalvQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5556,7 +5556,7 @@ snapshots:
     dependencies:
       qunitjs: 2.4.1
 
-  qunit@2.22.0:
+  qunit@2.23.0:
     dependencies:
       commander: 7.2.0
       node-watch: 0.7.3
