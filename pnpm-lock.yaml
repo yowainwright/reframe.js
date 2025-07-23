@@ -60,7 +60,7 @@ importers:
         version: 2.1.1(qunitjs@2.4.1)
       prettier:
         specifier: ^3.0.2
-        version: 3.5.3
+        version: 3.6.2
       qunit:
         specifier: ^2.19.4
         version: 2.24.1
@@ -2535,8 +2535,8 @@ packages:
     resolution: {integrity: sha512-s/46sYeylUfHNjI+sA/78FAHlmIuKqI9wNnzEOGehAlUUYeObv5C2mOinXBjyUyWmJ2SfcS2/ydApH4hTF4WXQ==}
     engines: {node: '>=0.10.0'}
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5751,7 +5751,7 @@ snapshots:
 
   preserve@0.2.0: {}
 
-  prettier@3.5.3: {}
+  prettier@3.6.2: {}
 
   process-nextick-args@2.0.1: {}
 
@@ -6035,7 +6035,7 @@ snapshots:
   run-async@4.0.4:
     dependencies:
       oxlint: 1.7.0
-      prettier: 3.5.3
+      prettier: 3.6.2
 
   run-parallel@1.2.0:
     dependencies:
